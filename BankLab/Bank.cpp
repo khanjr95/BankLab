@@ -2,6 +2,7 @@
 
 Bank::Bank(std::string name) : _name(name)
 {
+	//comment
 }
 
 Bank::~Bank()
