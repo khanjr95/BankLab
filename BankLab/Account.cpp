@@ -1,7 +1,7 @@
 #include "Account.h"
 
 Account::Account(Customer customer, int accountNumber) : _accountOwner(customer), _accountNumber(accountNumber)
-{
+{		
 }
 
 Account::~Account()
@@ -21,4 +21,9 @@ void Account::Withdraw(int numberOfPennies)
 int Account::getBalance()
 {
 	return 0;
+}
+
+int Account::getAccountNumber()
+{
+	return _accountNumber;
 }
