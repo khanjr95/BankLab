@@ -1,8 +1,7 @@
 #include "Bank.h"
 
 Bank::Bank(std::string name) : _name(name)
-{
-	//comment
+{	
 }
 
 Bank::~Bank()
@@ -43,7 +42,7 @@ std::string Bank::ListAccounts()
 
 void Bank::Deposit(int accountNumber, int amount)
 {
-	for (Account account : _accounts) {
+	for (Account &account : _accounts) {
 		if (account.getAccountNumber() == accountNumber) {
 			account.Deposit(amount);
 			return;
@@ -54,7 +53,7 @@ void Bank::Deposit(int accountNumber, int amount)
 
 void Bank::Withdraw(int accountNumber, int amount)
 {
-	for (Account account : _accounts) {
+	for (Account &account : _accounts) {
 		if (account.getAccountNumber() == accountNumber) {
 			account.Withdraw(amount);
 			return;
