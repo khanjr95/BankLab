@@ -9,7 +9,7 @@ private:
 	int _accountNumber;
 	int _balanceInPennies = 0;	
 	Customer _accountOwner;
-	std::vector<std::string> _log;
+	std::vector<std::string> *_log = new std::vector<std::string>();
 public:
 	Account(Customer customer, int accountNumber);
 	~Account();
@@ -18,5 +18,6 @@ public:
 	void Withdraw(int numberOfPennies);
 	int getBalance();
 	int getAccountNumber();
+	std::string accInfo();
 };
 
